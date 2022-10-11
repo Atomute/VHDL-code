@@ -1,0 +1,157 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "s[0]",
+					"strict" : false
+				},
+				{
+					"name" : "s[1]",
+					"strict" : false
+				},
+				{
+					"name" : "s[2]",
+					"strict" : false
+				},
+				{
+					"name" : "s[3]",
+					"strict" : false
+				},
+				{
+					"name" : "s[4]",
+					"strict" : false
+				},
+				{
+					"name" : "V",
+					"strict" : false
+				},
+				{
+					"name" : "C",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg_digit_1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg_digit_1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg_digit_1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg_digit_1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg_digit_1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg_digit_1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg_digit_1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg_digit_2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg_digit_2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg_digit_2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg_digit_2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg_digit_2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg_digit_2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg_digit_2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg_digit_3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg_digit_3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg_digit_3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_M",
+					"strict" : false
+				},
+				{
+					"name" : "A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "A[4]",
+					"strict" : false
+				},
+				{
+					"name" : "B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
