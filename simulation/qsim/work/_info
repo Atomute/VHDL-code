@@ -10,7 +10,7 @@ z2
 cModel Technology
 dD:/KMUT_NB_Document/1_2565 010123108 Digital Logic Design Lab/VHDL_Lab_2565/Lab_5/Four_bit_binary_to_2_digit_7_seg/simulation/qsim
 Efour_bit_binary_to_2_digit_7_seg
-Z0 w1665493689
+Z0 w1665500581
 Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 3HQPc5MVbmOPN?>a5EBYj2
 Z2 DPx8 cyclonev 19 cyclonev_components 0 22 jZ]H46BQLgIP5mfRTO`3B1
 Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 ^Ch;U@;bMk1;>A2B<UV`k2
@@ -20,19 +20,19 @@ Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z9 DPx6 altera 28 altera_primitives_components 0 22 ca:ehlQAg4;_gVV:^8MAg3
-!i122 136
+!i122 144
 Z10 dD:/work/digital/Four_bit_binary_to_2_digit_7_seg/simulation/qsim
 Z11 8Four_bit_binary_to_2_digit_7_seg.vho
 Z12 FFour_bit_binary_to_2_digit_7_seg.vho
 l0
 L39 1
-VIPz^2zIMO7>`:eNT0h;`O0
-!s100 02GQQ1S@7I2k7;O:Vcm5@1
+V4Q@WYTEIi?o^iz4e_nQcl0
+!s100 ;0>^]9a:]Nk<<3<CEjkg20
 Z13 OV;C;2020.1;71
 32
-Z14 !s110 1665493690
+Z14 !s110 1665500582
 !i10b 1
-Z15 !s108 1665493690.000000
+Z15 !s108 1665500581.000000
 Z16 !s90 -work|work|Four_bit_binary_to_2_digit_7_seg.vho|
 Z17 !s107 Four_bit_binary_to_2_digit_7_seg.vho|
 !i113 1
@@ -48,12 +48,12 @@ R6
 R7
 R8
 R9
-DEx4 work 32 four_bit_binary_to_2_digit_7_seg 0 22 IPz^2zIMO7>`:eNT0h;`O0
-!i122 136
-l274
-L55 2481
-VNkS4iihYTTSU450OCeGaf2
-!s100 n:]j=Va:JiFTFWCMjHdS:1
+DEx4 work 32 four_bit_binary_to_2_digit_7_seg 0 22 4Q@WYTEIi?o^iz4e_nQcl0
+!i122 144
+l262
+L54 2320
+V7L_`@fR8UG46gag23>g3e3
+!s100 8>HV]M29lfk]4fmgPXdZE0
 R13
 32
 R14
@@ -65,13 +65,13 @@ R17
 R18
 R19
 Efour_bit_binary_to_2_digit_7_seg_vhd_vec_tst
-R0
+Z20 w1665500580
 R7
 R8
-!i122 137
+!i122 145
 R10
-Z20 8Waveform4.vwf.vht
-Z21 FWaveform4.vwf.vht
+Z21 8Waveform5.vwf.vht
+Z22 FWaveform5.vwf.vht
 l0
 L32 1
 VYPXbDK3jDOk^8XJlhR_f30
@@ -80,28 +80,28 @@ R13
 32
 R14
 !i10b 1
-R15
-Z22 !s90 -work|work|Waveform4.vwf.vht|
-Z23 !s107 Waveform4.vwf.vht|
+Z23 !s108 1665500582.000000
+Z24 !s90 -work|work|Waveform5.vwf.vht|
+Z25 !s107 Waveform5.vwf.vht|
 !i113 1
 R18
 R19
 Afour_bit_binary_to_2_digit_7_seg_arch
 R7
 R8
-Z24 DEx4 work 44 four_bit_binary_to_2_digit_7_seg_vhd_vec_tst 0 22 YPXbDK3jDOk^8XJlhR_f30
-!i122 137
-l63
-L34 132
-V63N:jmYoMP1XVUAQ<_4`z0
-!s100 jA>;<DM=X@4F4UzP1kgD82
+Z26 DEx4 work 44 four_bit_binary_to_2_digit_7_seg_vhd_vec_tst 0 22 YPXbDK3jDOk^8XJlhR_f30
+!i122 145
+l61
+Z27 L34 193
+Z28 VFgN5>7zcQ@VHZ2?AUgn`63
+Z29 !s100 ?Fe79o3HPcE;9JQ8a2JFJ0
 R13
 32
 R14
 !i10b 1
-R15
-R22
 R23
+R24
+R25
 !i113 1
 R18
 R19

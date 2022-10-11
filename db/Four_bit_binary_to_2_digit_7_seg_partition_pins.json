@@ -88,18 +88,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "seven_seg_digit_3[1]",
-					"strict" : false
-				},
-				{
-					"name" : "seven_seg_digit_3[2]",
-					"strict" : false
-				},
-				{
-					"name" : "seven_seg_digit_3[6]",
-					"strict" : false
-				},
-				{
 					"name" : "A[0]",
 					"strict" : false
 				},

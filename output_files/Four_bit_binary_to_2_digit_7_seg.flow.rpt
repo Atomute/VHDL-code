@@ -1,5 +1,5 @@
 Flow report for Four_bit_binary_to_2_digit_7_seg
-Tue Oct 11 20:08:09 2022
+Tue Oct 11 22:03:01 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Oct 11 20:08:09 2022       ;
+; Flow Status                     ; Successful - Tue Oct 11 22:03:01 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Four_bit_binary_to_2_digit_7_seg            ;
 ; Top-level Entity Name           ; Four_bit_binary_to_2_digit_7_seg            ;
@@ -49,8 +49,8 @@ https://fpgasoftware.intel.com/eula.
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 26                                          ;
-; Total pins                      ; 41                                          ;
+; Total registers                 ; 22                                          ;
+; Total pins                      ; 34                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+----------------------------------+
 ; Option            ; Setting                          ;
 +-------------------+----------------------------------+
-; Start date & time ; 10/11/2022 20:03:20              ;
+; Start date & time ; 10/11/2022 22:00:03              ;
 ; Main task         ; Compilation                      ;
 ; Revision Name     ; Four_bit_binary_to_2_digit_7_seg ;
 +-------------------+----------------------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 198112232405133.166549340015708        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 198112232405133.166550040308448        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -96,15 +96,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4867 MB             ; 00:00:15                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4708 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4710 MB             ; 00:00:00                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4854 MB             ; 00:00:15                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4708 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4713 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4710 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4713 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4710 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4713 MB             ; 00:00:01                           ;
-; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:19                           ;
+; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:16                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -116,11 +111,6 @@ https://fpgasoftware.intel.com/eula.
 ; Analysis & Synthesis ; DESKTOP-08K0RVN  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-08K0RVN  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-08K0RVN  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-08K0RVN  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-08K0RVN  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-08K0RVN  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-08K0RVN  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-08K0RVN  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -128,12 +118,7 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Four_bit_binary_to_2_digit_7_seg -c Four_bit_binary_to_2_digit_7_seg
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Four_bit_binary_to_2_digit_7_seg -c Four_bit_binary_to_2_digit_7_seg --vector_source=D:/work/digital/Four_bit_binary_to_2_digit_7_seg/Waveform3.vwf --testbench_file=D:/work/digital/Four_bit_binary_to_2_digit_7_seg/simulation/qsim/Waveform3.vwf.vht
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Four_bit_binary_to_2_digit_7_seg -c Four_bit_binary_to_2_digit_7_seg --vector_source=D:/work/digital/Four_bit_binary_to_2_digit_7_seg/Waveform4.vwf --testbench_file=D:/work/digital/Four_bit_binary_to_2_digit_7_seg/simulation/qsim/Waveform4.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=D:/work/digital/Four_bit_binary_to_2_digit_7_seg/simulation/qsim/ Four_bit_binary_to_2_digit_7_seg -c Four_bit_binary_to_2_digit_7_seg
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Four_bit_binary_to_2_digit_7_seg -c Four_bit_binary_to_2_digit_7_seg --vector_source=D:/work/digital/Four_bit_binary_to_2_digit_7_seg/Waveform4.vwf --testbench_file=D:/work/digital/Four_bit_binary_to_2_digit_7_seg/simulation/qsim/Waveform4.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=D:/work/digital/Four_bit_binary_to_2_digit_7_seg/simulation/qsim/ Four_bit_binary_to_2_digit_7_seg -c Four_bit_binary_to_2_digit_7_seg
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Four_bit_binary_to_2_digit_7_seg -c Four_bit_binary_to_2_digit_7_seg --vector_source=D:/work/digital/Four_bit_binary_to_2_digit_7_seg/Waveform4.vwf --testbench_file=D:/work/digital/Four_bit_binary_to_2_digit_7_seg/simulation/qsim/Waveform4.vwf.vht
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Four_bit_binary_to_2_digit_7_seg -c Four_bit_binary_to_2_digit_7_seg --vector_source=D:/work/digital/Four_bit_binary_to_2_digit_7_seg/Waveform5.vwf --testbench_file=D:/work/digital/Four_bit_binary_to_2_digit_7_seg/simulation/qsim/Waveform5.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=D:/work/digital/Four_bit_binary_to_2_digit_7_seg/simulation/qsim/ Four_bit_binary_to_2_digit_7_seg -c Four_bit_binary_to_2_digit_7_seg
 
 

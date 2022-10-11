@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Four_bit_binary_to_2_digit_7_seg
-Tue Oct 11 20:03:28 2022
+Tue Oct 11 22:00:12 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,15 +13,13 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Parameter Settings for Inferred Entity Instance: BCD_2_digit_7_seg_display:convert_binary|lpm_divide:Mod0
- 12. Parameter Settings for Inferred Entity Instance: BCD_2_digit_7_seg_display:convert_binary|lpm_divide:Div0
- 13. Parameter Settings for Inferred Entity Instance: BCD_2_digit_7_seg_display:convert_binary|lpm_divide:Mod1
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Parameter Settings for Inferred Entity Instance: BCD_2_digit_7_seg_display:convert_binary|lpm_divide:Mod0
+ 10. Parameter Settings for Inferred Entity Instance: BCD_2_digit_7_seg_display:convert_binary|lpm_divide:Div0
+ 11. Parameter Settings for Inferred Entity Instance: BCD_2_digit_7_seg_display:convert_binary|lpm_divide:Mod1
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -48,14 +46,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 11 20:03:28 2022       ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 11 22:00:12 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Four_bit_binary_to_2_digit_7_seg            ;
 ; Top-level Entity Name           ; Four_bit_binary_to_2_digit_7_seg            ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 26                                          ;
-; Total pins                      ; 41                                          ;
+; Total registers                 ; 22                                          ;
+; Total pins                      ; 34                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -205,19 +203,19 @@ https://fpgasoftware.intel.com/eula.
 ;     -- 7 input functions                    ; 0           ;
 ;     -- 6 input functions                    ; 2           ;
 ;     -- 5 input functions                    ; 4           ;
-;     -- 4 input functions                    ; 33          ;
-;     -- <=3 input functions                  ; 36          ;
+;     -- 4 input functions                    ; 34          ;
+;     -- <=3 input functions                  ; 35          ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 26          ;
+; Dedicated logic registers                   ; 22          ;
 ;                                             ;             ;
-; I/O pins                                    ; 41          ;
+; I/O pins                                    ; 34          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 26          ;
-; Total fan-out                               ; 371         ;
-; Average fan-out                             ; 2.03        ;
+; Maximum fan-out                             ; 22          ;
+; Total fan-out                               ; 355         ;
+; Average fan-out                             ; 2.15        ;
 +---------------------------------------------+-------------+
 
 
@@ -226,8 +224,8 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+
 ; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                        ; Entity Name                      ; Library Name ;
 +-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+
-; |Four_bit_binary_to_2_digit_7_seg             ; 75 (0)              ; 26 (0)                    ; 0                 ; 0          ; 41   ; 0            ; |Four_bit_binary_to_2_digit_7_seg                                                                                                                                          ; Four_bit_binary_to_2_digit_7_seg ; work         ;
-;    |BCD_2_digit_7_seg_display:convert_binary| ; 43 (8)              ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Four_bit_binary_to_2_digit_7_seg|BCD_2_digit_7_seg_display:convert_binary                                                                                                 ; BCD_2_digit_7_seg_display        ; work         ;
+; |Four_bit_binary_to_2_digit_7_seg             ; 75 (0)              ; 22 (0)                    ; 0                 ; 0          ; 34   ; 0            ; |Four_bit_binary_to_2_digit_7_seg                                                                                                                                          ; Four_bit_binary_to_2_digit_7_seg ; work         ;
+;    |BCD_2_digit_7_seg_display:convert_binary| ; 43 (8)              ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Four_bit_binary_to_2_digit_7_seg|BCD_2_digit_7_seg_display:convert_binary                                                                                                 ; BCD_2_digit_7_seg_display        ; work         ;
 ;       |lpm_divide:Div0|                       ; 15 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Four_bit_binary_to_2_digit_7_seg|BCD_2_digit_7_seg_display:convert_binary|lpm_divide:Div0                                                                                 ; lpm_divide                       ; work         ;
 ;          |lpm_divide_2am:auto_generated|      ; 15 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Four_bit_binary_to_2_digit_7_seg|BCD_2_digit_7_seg_display:convert_binary|lpm_divide:Div0|lpm_divide_2am:auto_generated                                                   ; lpm_divide_2am                   ; work         ;
 ;             |sign_div_unsign_8kh:divider|     ; 15 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Four_bit_binary_to_2_digit_7_seg|BCD_2_digit_7_seg_display:convert_binary|lpm_divide:Div0|lpm_divide_2am:auto_generated|sign_div_unsign_8kh:divider                       ; sign_div_unsign_8kh              ; work         ;
@@ -242,40 +240,14 @@ https://fpgasoftware.intel.com/eula.
 ;                |alt_u_div_ose:divider|        ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Four_bit_binary_to_2_digit_7_seg|BCD_2_digit_7_seg_display:convert_binary|lpm_divide:Mod1|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider ; alt_u_div_ose                    ; work         ;
 ;    |BDC_to_7_segmen:seven_seg_display_1|      ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |Four_bit_binary_to_2_digit_7_seg|BDC_to_7_segmen:seven_seg_display_1                                                                                                      ; BDC_to_7_segmen                  ; work         ;
 ;    |BDC_to_7_segmen:seven_seg_display_2|      ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |Four_bit_binary_to_2_digit_7_seg|BDC_to_7_segmen:seven_seg_display_2                                                                                                      ; BDC_to_7_segmen                  ; work         ;
-;    |BDC_to_7_segmen:seven_seg_display_3|      ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |Four_bit_binary_to_2_digit_7_seg|BDC_to_7_segmen:seven_seg_display_3                                                                                                      ; BDC_to_7_segmen                  ; work         ;
-;    |addsub:addsub|                            ; 17 (3)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Four_bit_binary_to_2_digit_7_seg|addsub:addsub                                                                                                                            ; addsub                           ; work         ;
+;    |addsub:addsub|                            ; 18 (3)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Four_bit_binary_to_2_digit_7_seg|addsub:addsub                                                                                                                            ; addsub                           ; work         ;
 ;       |fulladder:sum1|                        ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Four_bit_binary_to_2_digit_7_seg|addsub:addsub|fulladder:sum1                                                                                                             ; fulladder                        ; work         ;
 ;       |fulladder:sum2|                        ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Four_bit_binary_to_2_digit_7_seg|addsub:addsub|fulladder:sum2                                                                                                             ; fulladder                        ; work         ;
 ;       |fulladder:sum3|                        ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Four_bit_binary_to_2_digit_7_seg|addsub:addsub|fulladder:sum3                                                                                                             ; fulladder                        ; work         ;
 ;       |fulladder:sum4|                        ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Four_bit_binary_to_2_digit_7_seg|addsub:addsub|fulladder:sum4                                                                                                             ; fulladder                        ; work         ;
-;       |fulladder:sum5|                        ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Four_bit_binary_to_2_digit_7_seg|addsub:addsub|fulladder:sum5                                                                                                             ; fulladder                        ; work         ;
+;       |fulladder:sum5|                        ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Four_bit_binary_to_2_digit_7_seg|addsub:addsub|fulladder:sum5                                                                                                             ; fulladder                        ; work         ;
 +-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                            ;
-+----------------------------------------------------------+--------------------------------------------------------------------+
-; Register name                                            ; Reason for Removal                                                 ;
-+----------------------------------------------------------+--------------------------------------------------------------------+
-; BCD_2_digit_7_seg_display:convert_binary|int_data_3[0,2] ; Stuck at GND due to stuck port data_in                             ;
-; BDC_to_7_segmen:seven_seg_display_3|seven_seg[0,3,4]     ; Stuck at GND due to stuck port data_in                             ;
-; BCD_2_digit_7_seg_display:convert_binary|int_data_3[3]   ; Merged with BCD_2_digit_7_seg_display:convert_binary|int_data_3[1] ;
-; BDC_to_7_segmen:seven_seg_display_3|seven_seg[5]         ; Stuck at GND due to stuck port data_in                             ;
-; Total Number of Removed Registers = 7                    ;                                                                    ;
-+----------------------------------------------------------+--------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                            ;
-+--------------------------------------------------------+---------------------------+---------------------------------------------------+
-; Register name                                          ; Reason for Removal        ; Registers Removed due to This Register            ;
-+--------------------------------------------------------+---------------------------+---------------------------------------------------+
-; BCD_2_digit_7_seg_display:convert_binary|int_data_3[0] ; Stuck at GND              ; BDC_to_7_segmen:seven_seg_display_3|seven_seg[0], ;
-;                                                        ; due to stuck port data_in ; BDC_to_7_segmen:seven_seg_display_3|seven_seg[3], ;
-;                                                        ;                           ; BDC_to_7_segmen:seven_seg_display_3|seven_seg[4], ;
-;                                                        ;                           ; BDC_to_7_segmen:seven_seg_display_3|seven_seg[5]  ;
-+--------------------------------------------------------+---------------------------+---------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -283,10 +255,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 26    ;
+; Total registers                              ; 22    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 9     ;
+; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -367,30 +339,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 26                          ;
-;     CLR               ; 9                           ;
-;     plain             ; 17                          ;
-; arriav_lcell_comb     ; 76                          ;
+; arriav_ff             ; 22                          ;
+;     CLR               ; 8                           ;
+;     plain             ; 14                          ;
+; arriav_lcell_comb     ; 75                          ;
 ;     arith             ; 26                          ;
 ;         0 data inputs ; 8                           ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 2                           ;
 ;         4 data inputs ; 12                          ;
-;     normal            ; 45                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
+;     normal            ; 44                          ;
 ;         2 data inputs ; 4                           ;
 ;         3 data inputs ; 12                          ;
-;         4 data inputs ; 21                          ;
+;         4 data inputs ; 22                          ;
 ;         5 data inputs ; 4                           ;
 ;         6 data inputs ; 2                           ;
 ;     shared            ; 5                           ;
 ;         0 data inputs ; 3                           ;
 ;         1 data inputs ; 2                           ;
-; boundary_port         ; 41                          ;
+; boundary_port         ; 34                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.90                        ;
-; Average LUT depth     ; 4.48                        ;
+; Average LUT depth     ; 4.66                        ;
 +-----------------------+-----------------------------+
 
 
@@ -409,7 +379,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Oct 11 20:03:20 2022
+    Info: Processing started: Tue Oct 11 22:00:03 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Four_bit_binary_to_2_digit_7_seg -c Four_bit_binary_to_2_digit_7_seg
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -417,10 +387,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file bdc_to_
     Info (12022): Found design unit 1: BDC_to_7_segmen-data_process File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BDC_to_7_segmen.vhd Line: 13
     Info (12023): Found entity 1: BDC_to_7_segmen File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BDC_to_7_segmen.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file bcd_2_digit_7_seg_display.vhd
-    Info (12022): Found design unit 1: BCD_2_digit_7_seg_display-Behavioral File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 16
+    Info (12022): Found design unit 1: BCD_2_digit_7_seg_display-Behavioral File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 15
     Info (12023): Found entity 1: BCD_2_digit_7_seg_display File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file four_bit_binary_to_2_digit_7_seg.vhd
-    Info (12022): Found design unit 1: Four_bit_binary_to_2_digit_7_seg-converter File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/Four_bit_binary_to_2_digit_7_seg.vhd Line: 19
+    Info (12022): Found design unit 1: Four_bit_binary_to_2_digit_7_seg-converter File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/Four_bit_binary_to_2_digit_7_seg.vhd Line: 18
     Info (12023): Found entity 1: Four_bit_binary_to_2_digit_7_seg File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/Four_bit_binary_to_2_digit_7_seg.vhd Line: 5
 Info (12021): Found 4 design units, including 2 entities, in source file addsub.vhd
     Info (12022): Found design unit 1: fulladder-data_flow File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/addsub.vhd Line: 10
@@ -428,20 +398,19 @@ Info (12021): Found 4 design units, including 2 entities, in source file addsub.
     Info (12023): Found entity 1: fulladder File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/addsub.vhd Line: 4
     Info (12023): Found entity 2: addsub File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/addsub.vhd Line: 19
 Info (12127): Elaborating entity "Four_bit_binary_to_2_digit_7_seg" for the top level hierarchy
-Info (12129): Elaborating entity "addsub" using architecture "A:struct" for hierarchy "addsub:addsub" File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/Four_bit_binary_to_2_digit_7_seg.vhd Line: 25
+Info (12129): Elaborating entity "addsub" using architecture "A:struct" for hierarchy "addsub:addsub" File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/Four_bit_binary_to_2_digit_7_seg.vhd Line: 23
 Info (12128): Elaborating entity "fulladder" for hierarchy "addsub:addsub|fulladder:sum1" File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/addsub.vhd Line: 37
-Info (12129): Elaborating entity "BCD_2_digit_7_seg_display" using architecture "A:behavioral" for hierarchy "BCD_2_digit_7_seg_display:convert_binary" File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/Four_bit_binary_to_2_digit_7_seg.vhd Line: 27
-Warning (10492): VHDL Process Statement warning at BCD_2_digit_7_seg_display.vhd(27): signal "V" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 27
-Warning (10492): VHDL Process Statement warning at BCD_2_digit_7_seg_display.vhd(38): signal "int_data_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 38
-Warning (10492): VHDL Process Statement warning at BCD_2_digit_7_seg_display.vhd(39): signal "int_data_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 39
-Warning (10492): VHDL Process Statement warning at BCD_2_digit_7_seg_display.vhd(40): signal "int_data_3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 40
-Info (12129): Elaborating entity "BDC_to_7_segmen" using architecture "A:data_process" for hierarchy "BDC_to_7_segmen:seven_seg_display_1" File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/Four_bit_binary_to_2_digit_7_seg.vhd Line: 36
+Info (12129): Elaborating entity "BCD_2_digit_7_seg_display" using architecture "A:behavioral" for hierarchy "BCD_2_digit_7_seg_display:convert_binary" File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/Four_bit_binary_to_2_digit_7_seg.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at BCD_2_digit_7_seg_display.vhd(25): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at BCD_2_digit_7_seg_display.vhd(34): signal "int_data_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 34
+Warning (10492): VHDL Process Statement warning at BCD_2_digit_7_seg_display.vhd(35): signal "int_data_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 35
+Info (12129): Elaborating entity "BDC_to_7_segmen" using architecture "A:data_process" for hierarchy "BDC_to_7_segmen:seven_seg_display_1" File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/Four_bit_binary_to_2_digit_7_seg.vhd Line: 33
 Info (278001): Inferred 3 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "BCD_2_digit_7_seg_display:convert_binary|Mod0" File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 32
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "BCD_2_digit_7_seg_display:convert_binary|Div0" File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 33
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "BCD_2_digit_7_seg_display:convert_binary|Mod1" File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 33
-Info (12130): Elaborated megafunction instantiation "BCD_2_digit_7_seg_display:convert_binary|lpm_divide:Mod0" File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 32
-Info (12133): Instantiated megafunction "BCD_2_digit_7_seg_display:convert_binary|lpm_divide:Mod0" with the following parameter: File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 32
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "BCD_2_digit_7_seg_display:convert_binary|Mod0" File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 29
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "BCD_2_digit_7_seg_display:convert_binary|Div0" File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 30
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "BCD_2_digit_7_seg_display:convert_binary|Mod1" File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 30
+Info (12130): Elaborated megafunction instantiation "BCD_2_digit_7_seg_display:convert_binary|lpm_divide:Mod0" File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 29
+Info (12133): Instantiated megafunction "BCD_2_digit_7_seg_display:convert_binary|lpm_divide:Mod0" with the following parameter: File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 29
     Info (12134): Parameter "LPM_WIDTHN" = "5"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -452,8 +421,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_9kh File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/db/sign_div_unsign_9kh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ose.tdf
     Info (12023): Found entity 1: alt_u_div_ose File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/db/alt_u_div_ose.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "BCD_2_digit_7_seg_display:convert_binary|lpm_divide:Div0" File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 33
-Info (12133): Instantiated megafunction "BCD_2_digit_7_seg_display:convert_binary|lpm_divide:Div0" with the following parameter: File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 33
+Info (12130): Elaborated megafunction instantiation "BCD_2_digit_7_seg_display:convert_binary|lpm_divide:Div0" File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 30
+Info (12133): Instantiated megafunction "BCD_2_digit_7_seg_display:convert_binary|lpm_divide:Div0" with the following parameter: File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/BCD_2_digit_7_seg_display.vhd Line: 30
     Info (12134): Parameter "LPM_WIDTHN" = "5"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -464,22 +433,17 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_8kh File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/db/sign_div_unsign_8kh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mse.tdf
     Info (12023): Found entity 1: alt_u_div_mse File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/db/alt_u_div_mse.tdf Line: 23
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "seven_seg_digit_3[0]" is stuck at GND File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/Four_bit_binary_to_2_digit_7_seg.vhd Line: 16
-    Warning (13410): Pin "seven_seg_digit_3[3]" is stuck at GND File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/Four_bit_binary_to_2_digit_7_seg.vhd Line: 16
-    Warning (13410): Pin "seven_seg_digit_3[4]" is stuck at GND File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/Four_bit_binary_to_2_digit_7_seg.vhd Line: 16
-    Warning (13410): Pin "seven_seg_digit_3[5]" is stuck at GND File: D:/work/digital/Four_bit_binary_to_2_digit_7_seg/Four_bit_binary_to_2_digit_7_seg.vhd Line: 16
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 119 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 109 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 28 output pins
-    Info (21061): Implemented 78 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4867 megabytes
-    Info: Processing ended: Tue Oct 11 20:03:28 2022
-    Info: Elapsed time: 00:00:08
+    Info (21059): Implemented 21 output pins
+    Info (21061): Implemented 75 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4854 megabytes
+    Info: Processing ended: Tue Oct 11 22:00:12 2022
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:16
 
 
