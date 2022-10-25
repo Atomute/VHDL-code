@@ -1,0 +1,47 @@
+library ieee;
+use ieee.std_logic_1164.ALL;
+
+entity fulladder is
+    port(
+        A,B,C_in : in std_logic;
+        sum,C_out : out std_logic);
+end fulladder;
+
+architecture data_flow of fulladder is 
+    begin
+        sum <= (A xor B) xor C_in;
+        C_out <= ((A xor B) and C_in) or (B and A);
+end data_flow;
+
+
+library ieee;
+use ieee.std_logic_1164.ALL;
+use ieee.STD_LOGIC_ARITH.all;
+
+entity addandsub is
+    generic (N : integer := 5);
+    port(
+        A,B : in std_logic_vector (N-1 downto 0);
+        ctrl_M : in std_logic;
+        s : out std_logic_vector (N-1 downto 0) );
+end addandsub;
+
+architecture struct of addandsub is
+    component fulladder is
+        port(
+            A,B,C_in : in std_logic;
+            sum,C_out : out std_logic);
+    end component;
+
+    signal x : std_logic_vector(N downto 0);
+
+    begin
+        x(0) <= ctrl_M ;
+        eq_compar : for i in 0 to N-1 generate
+                    sum : fulladder port map( A(i),B(i) xor ctrl_M,x(i),s(i),x(i+1) );
+        end generate;
+        
+    C <= x(N-1);
+    V <= x(N-1) xor x(N-2);
+    
+end struct; 
