@@ -1,0 +1,84 @@
+library ieee;
+use ieee.std_logic_1164.ALL;
+use ieee.STD_LOGIC_ARITH.all;
+
+entity division is 
+	generic(N : integer := 5);
+	port(clock  : in  std_logic;	-- system clock
+        reset  : in  std_logic; 	-- synchronous reset, active-high
+		  start	: in  std_logic;
+		  A,B		: in  std_logic_vector(N-1 downto 0) := (others => '0');
+		  Q		: out std_logic_vector(N-1 downto 0) := (others => '0');  -- quotient
+		  R		: out std_logic_vector(2*N-1 downto 0) := (others => '0');	-- remainer
+		  DONE	: out std_logic
+		);
+end division;
+
+architecture divide of division is
+	type state_type is (s0,s1);
+	
+	signal DATA_diviser	: std_logic_vector(2*N-1 downto 0) := (others => '0');
+	signal DATA_remainer : std_logic_vector(2*N-1 downto 0) := (others => '0');
+	signal DATA_quotient : std_logic_vector(N-1 downto 0) := (others => '0');
+	signal control_check : std_logic_vector(2*N-1 downto 0) := (others => '0');
+	
+	signal DATA_DONE : std_logic := '0';
+
+	signal bit_counter : integer := 0;
+	signal state : state_type := s0;
+	
+	begin
+	process(clock,reset,start)
+		begin
+			if (reset = '1') then 
+				state <= s0;
+				DATA_diviser <= (others => '0');
+				DATA_remainer <= (others => '0');
+				DATA_quotient <= (others => '0');
+			elsif rising_edge(clock) then
+				case state is
+				
+					when s0 =>
+						if ( start = '1') then
+							DATA_diviser(N-1 downto 0) <= A;
+							DATA_remainer(N-1 downto 0) <= B;
+							state <= s1;
+						else
+							state <= s0;
+							DONE <= '0';
+						end if;
+						
+					when s1 =>
+						if (bit_counter < (n+1)) then
+							state <= s1;
+							DATA_remainer <= (DATA_remainer + DATA_diviser);			
+							if control_check(2*N-1) = '1' then
+								DATA_diviser <= std_logic_vector(shift_right(unsigned(DATA_diviser),1));
+								DATA_quotient <= std_logic_vector(shift_left(unsigned(DATA_quotient),1));
+								
+								-- keep the same remainer
+								bit_counter <= (bit_counter+1);
+							else
+								DATA_diviser <= std_logic_vector(shift_right(unsigned(DATA_diviser),1));
+								DATA_quotient <= std_logic_vector(shift_left(unsigned(DATA_quotient),1));
+								DATA_quotient(0) <= '1';
+								DATA_remainer <= control_check;
+								
+								bit_counter <= (bit_counter+1);
+							end if;
+						else
+							bit_counter <= 0;
+							DATA_diviser <= (others => '0');
+							state <= s0;
+							DONE <= '1';
+							R <= DATA_remainer;
+							Q <= DATA_quotient;
+						end if;
+						
+						when others =>
+							state <= s0;
+					end case;
+				end if;
+			end process;			
+end divide;
+					
