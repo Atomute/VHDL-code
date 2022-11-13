@@ -35,6 +35,7 @@ architecture divide of division is
 				DATA_divisor <= (others => '0');
 				DATA_remainder <= (others => '0');
 				DATA_quotient <= (others => '0');
+				DONE <= '0';
 			elsif rising_edge(clock) then
 				case state is
 					when s0 =>
