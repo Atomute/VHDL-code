@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.ALL;
 
 entity calculator is 
-	generic( N : integer := 4);
+	generic( N : integer := 5);
 	port( clock,reset,start : in std_logic;
 			A,B : in std_logic_vector( N-1 downto 0);
 			ctrl : in std_logic_vector(1 downto 0) := (others => '0');
@@ -32,9 +32,9 @@ architecture converter of calculator is
 	signal C	: std_logic;
 	signal V : std_logic;
 	
-	signal result_add : std_logic_vector(N-1 downto 0) := (others => '0');
-	signal result_sub : std_logic_vector(N-1 downto 0) := (others => '0');
-	signal result_mul : std_logic_vector(N-1 downto 0) := (others => '0');
+	signal result_add : std_logic_vector(N downto 0) := (others => '0');
+	signal result_sub : std_logic_vector(N downto 0) := (others => '0');
+	signal result_mul : std_logic_vector(2*N-1 downto 0) := (others => '0');
 	signal result_divide : std_logic_vector(N-1 downto 0) := (others => '0');
 	
 	signal add_DONE : std_logic;
@@ -45,7 +45,7 @@ architecture converter of calculator is
 	begin
 		adder : entity work.addsub(struct)
 					port map(clock => clock,
-								start => start,
+								start => not start,
 								A => A,
 								B => B,
 								ctrl_M => '0',
@@ -54,7 +54,7 @@ architecture converter of calculator is
 								V => V);
 		subtractor : entity work.addsub(struct)
 					port map(clock => clock,
-								start => start,
+								start => not start,
 								A => A,
 								B => B,  
 								ctrl_M => '1',
@@ -62,20 +62,28 @@ architecture converter of calculator is
 								DONE => sub_DONE);
 		divider : entity work.division(divide)
 					port map(clock => clock,
-								reset => reset,
-								start => start,
+								reset => not reset,
+								start => not start,
 								A => A,
 								B => B,
 								Q => result_divide,
 								R => remainder,
 								DONE => divide_DONE);
+		multi : entity work.multiplication(behave)
+					port map(clock => clock,
+								reset => not reset,
+								start => not start,
+								A => A,
+								B => B,
+								R => result_mul,
+								DONE => mul_DONE);
 		
 		convert_binary	    :	entity work.BCD_to_2digitDec(Behavioral)
 									port map(
 												C => C,
-												reset => reset,
+												reset => not reset,
 												clock => clock,
-												start => start,
+												start => not start,
 												ctrl => ctrl,
 												
 												V => V,

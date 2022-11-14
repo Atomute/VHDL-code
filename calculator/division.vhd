@@ -5,7 +5,7 @@ use ieee.std_logic_unsigned.all;
 
 
 entity division is 
-	generic(N : integer := 4);
+	generic(N : integer := 5);
 	port(clock  : in  std_logic;	-- system clock
         reset  : in  std_logic; 	-- synchronous reset, active-high
 		  start	: in  std_logic;
@@ -46,6 +46,7 @@ architecture divide of division is
 							state <= s1;
 						else
 							DONE <= '0';
+							
 							state <= s0;
 						end if;
 					when s1 =>
